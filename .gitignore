@@ -1,0 +1,9 @@
+.vscode/settings.json
+src/main/java/com/cesupa/estrutura_de_dados/App.java
+src/test/java/com/cesupa/estrutura_de_dados/AppTest.java
+target/classes/com/cesupa/estrutura_de_dados/App.class
+target/classes/com/cesupa/estrutura_de_dados/algoritmos/AlgoritmosBusca.class
+target/classes/com/cesupa/estrutura_de_dados/algoritmos/AlgoritmosOrdenacao.class
+target/classes/com/cesupa/estrutura_de_dados/algoritmos/DivideAndConquer.class
+target/classes/com/cesupa/estrutura_de_dados/estruturas/Arranjo.class
+target/classes/com/cesupa/estrutura_de_dados/estruturas/Matriz.class
