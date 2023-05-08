@@ -43,6 +43,7 @@ public class AlgoritmosOrdenacao {
         }
         System.out.printf("Lista ordenada: %s", Arrays.toString(array));
     }
+
     public static void reverseSelectionSort(int[] array){
         final int comprimentoArray = array.length;
          for (int i = 0; i < comprimentoArray - 1; i++) {
@@ -58,6 +59,7 @@ public class AlgoritmosOrdenacao {
         }
         System.out.printf("Lista em ordem decrescente: %s\n", Arrays.toString(array));
     }
+
     public static void insertionSort(int[] array){
         // ordenação por inserção
         // melhor caso O(n), pior caso O(n^2), complexidade de espaço O(1)
@@ -78,6 +80,7 @@ public class AlgoritmosOrdenacao {
         }
         System.out.printf("lista ordenada: %s\n", Arrays.toString(array));
     }
+
     public static void bubbleSort(int[] array){
         // ordenação por bolha/flutuação
         // melhor caso O(n), pior caso O(n^2), complexidade de espaço O(1)
@@ -95,6 +98,7 @@ public class AlgoritmosOrdenacao {
         }
         System.out.printf("lista ordenada: %s\n", Arrays.toString(array));
     }
+    
     public static void reverseBubbleSort(int[] array) {
         boolean continuarSwap = true;
         while(continuarSwap){

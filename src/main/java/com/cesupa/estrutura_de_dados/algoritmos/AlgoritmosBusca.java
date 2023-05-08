@@ -13,12 +13,14 @@ public class AlgoritmosBusca {
         }
         return index;
     }
+
     public static String binarySearch(Integer[] array, int valor){
         // complexidade - O(log n)
         final Integer index = Arrays.binarySearch(array, valor);
         String texto = index == -1 ? "O valor não está na lista" : "o valor está na posição " + index.toString();
         return texto;
     }
+    
     public static int jumpSearch(Integer[] array, int valor) {
         // complexidade - O(n^1/2)
         final int comprimento = array.length;
