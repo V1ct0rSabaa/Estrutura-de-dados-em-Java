@@ -17,11 +17,15 @@ public class DivideAndConquer {
         //mergeSort(arrayTeste);
         shellSort(arrayTeste);
     }
+    
     public static void shellSort(int[] array) {
         // ordenação de Donald Shell
         // melhor caso O(n * log n), pior caso O(n), complexidade de espaço O(1)
         /* Lógica do algoritmo
-         * 
+         * 1- definir o fator k, que normalmente é metade da quantidade dos elementos
+         * 2- comparar valores dos indices k e j(iterador), fazendo swap para ordenar
+         * 3- diminuir o valor de k em 1
+         * 4- repetir passo 2 e 3 até que k seja 0
         */        
         int i, j, temporario;
         final int comprimento = array.length;
@@ -30,7 +34,7 @@ public class DivideAndConquer {
             for(i = k; i < comprimento; i++){
                 temporario = array[i];
                 j = i - k;
-                while(j > -1 && temporario < array[j]){
+                while(j >= 0 && temporario < array[j]){
                     array[j + k] = array[j];
                     j -= k;
                 }
@@ -40,6 +44,7 @@ public class DivideAndConquer {
         }
         System.out.printf("Lista ordenada: %s\n", Arrays.toString(array));
     }
+    
     private static void merge(int[] arrayOriginal, int[] ladoEsquerdo, int[] ladoDireito){
         final int tamanhoEsquerdo = ladoEsquerdo.length;
         final int tamanhoDireito = ladoDireito.length;
@@ -66,6 +71,7 @@ public class DivideAndConquer {
             k++;
         }
     }
+
     public static void mergeSort(int[] array) {
         // ordenação por mistura/junção
         // melhor caso O(n * log n), pior caso O(n * log n), complexidade de espaço O(n)
@@ -96,12 +102,14 @@ public class DivideAndConquer {
         merge(array, ladoEsquerdo, ladoDireito);
         // System.out.printf("Lista ordenada: %s\n", Arrays.toString(array));
     }
+
     private static void swap(int[] array, int index1, int index2){
         // troca 2 elementos de lugar na array
         int temporario = array[index1];
         array[index1] = array[index2];
         array[index2] = temporario;
     }
+
     public static void quicksort(int[] array, int indexMenor, int indexMaior){
         // ordenação rápida
         // melhor caso O(n * log n), pior caso O(n^2), complexidade de espaço O(log n)
